@@ -12,51 +12,74 @@
     <link rel="stylesheet" href="./css/material-symbols.css" />
     <link rel="stylesheet" href="./css/dom.css" />
 
-    <script type="module" src="./js/dom-06-final.js"></script>
+    <script type="module" src="./js/dom-07-lab.js"></script>
 
-    <title>DOM-06: Final</title>
+    <title>DOM-07: Lab</title>
   </head>
   <body>
-    <article class="app-cmp-section">
-      <header>
-        <button
-          type="button"
-          class="app-cl-btn app-cl-primary app-cmd-add-number-input"
-        >
-          <i class="material-symbols-outlined">add</i>
-          Add
-        </button>
-      </header>
-      <div class="app-cl-column-container">
-        <section class="app-cmp-number-list">
-          <template class="app-tmp-number-component">
+    <div style="text-align: center; margin-bottom: 2rem">
+      <button
+        type="button"
+        class="app-cl-btn app-cl-primary app-cmd-add-section"
+      >
+        <i class="material-symbols-outlined">add_notes</i>
+        Section
+      </button>
+    </div>
+
+    <main class="app-cmp-main-container"></main>
+
+    <template class="app-tmp-section">
+      <article class="app-cmp-section">
+        <header>
+          <button
+            type="button"
+            class="app-cl-btn app-cl-primary app-cmd-add-number-input"
+          >
+            <i class="material-symbols-outlined">input</i>
+            Input
+          </button>
+
+          <label style="font-size: 1.2rem"
+            ><b>Section <span class="app-title-section"></span></b
+          ></label>
+
+          <button
+            type="button"
+            class="app-cl-btn app-cl-warn app-cl-icon app-cmd-remove-section"
+          >
+            <i class="material-symbols-outlined">delete_forever</i>
+          </button>
+        </header>
+
+        <div class="app-cl-column-container">
+          <section class="app-cmp-number-list">
+            <template class="app-tmp-number-component">
+              <div class="app-cmp-number">
+                <label>
+                  <b>Number <span class="app-title-number"></span></b>
+                  <input type="number" class="app-inp-number" value="0" />
+                </label>
+                <button
+                  type="button"
+                  class="app-cl-btn app-cl-warn app-cl-icon app-cmd-remove-number-input"
+                >
+                  <i class="material-symbols-outlined">delete_forever</i>
+                </button>
+              </div>
+            </template>
+          </section>
+
+          <section>
             <div class="app-cmp-number">
               <label>
-                <b>Number<span class="app-title-number"></span></b>
-                <input type="number" class="app-inp-number" value="0" />
+                <b>Result</b>
+                <output class="app-cl-number app-out-number">0</output>
               </label>
-              <button
-                type="button"
-                class="app-cl-btn app-cl-warn app-cl-icon app-cmd-remove-number-input"
-              >
-                <i class="material-symbols-outlined">delete_forever</i>
-              </button>
             </div>
-          </template>
-        </section>
-        <section>
-          <div class="app-cmp-number">
-            <label>
-              <b>Result</b>
-              <output
-                class="app-cl-number app-out-number"
-                style="padding-right: calc(5ch + 3px)"
-                >0</output
-              >
-            </label>
-          </div>
-        </section>
-      </div>
-    </article>
+          </section>
+        </div>
+      </article>
+    </template>
   </body>
 </html>
