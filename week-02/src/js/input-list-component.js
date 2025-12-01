@@ -24,6 +24,7 @@ export function createComponent(componentElem) {
       if (title) title.textContent = `${index + 1}`;
 
       const removeBtn = section.querySelector(".app-cmd-remove-section");
+
       if (removeBtn) removeBtn.disabled = sections.length === 1;
     });
   };
@@ -44,13 +45,21 @@ export function createComponent(componentElem) {
     }
 
     const regenerateNumberTitlesAndStatus = () => {
-      [...inputListContainer.querySelectorAll(".app-cmp-number")].forEach(
-        (inputContainer, index) => {
-          [...inputContainer.querySelectorAll(".app-title-number")].forEach(
-            (elem) => (elem.textContent = `${index + 1}`)
-          );
+      const inputItems = [
+        ...inputListContainer.querySelectorAll(".app-cmp-number"),
+      ];
+
+      inputItems.forEach((inputContainer, index) => {
+        const title = inputContainer.querySelector(".app-title-number");
+        if (title) title.textContent = `${index + 1}`;
+
+        const removeBtn = inputContainer.querySelector(
+          ".app-cmd-remove-number-input"
+        );
+        if (removeBtn) {
+          removeBtn.disabled = inputItems.length === 1;
         }
-      );
+      });
     };
 
     const recalculateResult = () => {
