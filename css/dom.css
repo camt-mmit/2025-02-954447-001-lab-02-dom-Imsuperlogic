@@ -12,11 +12,11 @@ body {
 }
 
 .app-cl-primary {
-  --app-color: rgb(8, 151, 127);
+  --app-color: rgb(18, 165, 140);
 }
 
 .app-cl-warn {
-  --app-color: rgb(247, 100, 239);
+  --app-color: rgb(241, 78, 160);
 }
 
 .app-cl-column-container {
